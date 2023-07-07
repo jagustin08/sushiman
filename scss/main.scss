@@ -59,7 +59,17 @@ $utilities: map-merge(
           ),
         ),
       ),
-    ),    
+    ),
+    
+    "color": map-merge(
+      map-get($utilities, "color"),
+      ( responsive: true ),
+    ),
+
+    "border-end": map-merge(
+      map-get($utilities, "border-end"),
+      ( responsive: true ),
+    )
   )
 );
 
@@ -76,7 +86,7 @@ $utilities: map-merge(
 
 :root {
     --#{$prefix}font-jakarta: #{inspect($font-family-jakarta)};    
-    --#{$prefix}font-playfair: #{inspect($font-family-playfair)};
+    --#{$prefix}font-playfair: #{inspect($font-family-playfair)};    
 }
 
 .container-fluid {
@@ -84,5 +94,23 @@ $utilities: map-merge(
 }
 
 .display-0 {
-  @include rfs(7rem, font-size);
+  @include rfs(6rem, font-size);
+}
+
+main {
+  --navbar-height: 77px;
+
+  @include media-breakpoint-up('md') {
+    --navbar-height: 82px;
+  }
+}
+
+#home {
+  .container-fluid {
+    @include make-container(0%);
+    
+    @include media-breakpoint-up('md') {
+      @include make-container(11%);
+    }
+  }  
 }

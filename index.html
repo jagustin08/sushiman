@@ -10,16 +10,16 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top py-7">
+    <nav class="navbar navbar-expand-lg position-absolute w-100 py-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <h3 class="text-uppercase fw-bold font-playfair text-light">Sushiman</h3>
+          <h3 class="text-uppercase fw-bold font-playfair text-md-beige">Sushi<span class="text-maroon text-md-beige">man</span></h3>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto text-uppercase fw-semibold fs-5 gap-lg-7" style="--bs-nav-link-color: var(--bs-body-color)">
+          <ul class="navbar-nav ms-auto text-uppercase fw-semibold fs-6 gap-lg-5" style="--bs-nav-link-color: var(--bs-body-color)">
             <li class="nav-item">
               <a class="nav-link" href="#">Menu</a>
             </li>
@@ -39,26 +39,42 @@
   </header>
 
   <main>
-    <section id="home">
+    <section id="home" class="overflow-hidden">
       <div class="container-fluid">
-        <div class="row vh-100">
-          <div class="d-none d-lg-block col-lg-4 bg-maroon">
-            <img src="images/sushi-1.png" alt="" class="img-fluid">
+        <div class="row g-0 min-vh-100">
+          <div class="d-none d-md-block col-md-4 bg-maroon position-relative z-n1">
+            <div class="d-none d-md-block position-absolute w-100 h-100 end-100 bg-maroon"></div>
           </div>
 
-          <div class="col col-lg-8">
-            <h1 class="display-0 font-playfair fw-semibold"> Feel the taste of Japanese foods </h1>
-            <p>Feel the taste of most popular Japanese foods from anywhere and anytime.</p>
-            <button type="button" class="btn btn-primary">Order Now</button>
-            <button type="button" class="btn btn-primary">How to Order</button>
-
-            <div class="row bg-beige">
-              <div class="col-lg-6">                
-                <span>24+</span>
-                <p>Happy Customers</p>
+          <div class="col-md-8 d-flex flex-column">
+            <div class="d-flex flex-column justify-content-center h-100 gap-3 px-4 pe-md-0" style="padding-top:var(--navbar-height)">
+              <h1 class="font-playfair display-1 fw-semibold">Feel the taste of Japanese foods</h1>
+  
+              <div class="d-flex gap-3">
+                <img src="https://placehold.co/100x100" alt="" class="d-md-none">
+                <p class="mb-0">Feel the taste of most popular Japanese foods from anywhere and anytime.</p>
               </div>
-              <div class="col-lg-6">
-                <swiper></swiper>
+  
+              <div class="d-flex flex-column flex-md-row gap-3">
+                <button type="button" class="btn btn-dark rounded-pill py-3 px-md-6">Order Now</button>
+                <button type="button" class="btn rounded-pill py-0">
+                  <img src="images/play-circle.svg" alt="" class="img-fluid me-2"> How to Order
+                </button>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column flex-lg-row bg-beige mt-auto position-relative z-n1 align-items-lg-center py-lg-4">
+              <div class="d-none d-md-block position-absolute w-100 h-100 start-100 bg-beige"></div>
+              <div class="d-flex align-items-center justify-content-center gap-3 p-3 py-lg-0 px-lg-4 border-end-lg" style="--bs-border-color: #e5d7c6">
+                <h2 class="display-1 font-playfair">24K+</h2>
+                <p class="mb-0">Happy Customers</p>
+              </div>
+
+              <div class="p-3 py-lg-0 px-lg-4">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="https://placehold.co/70x70" alt="" class="rounded-circle">
+                  <p class="mb-0">"This is the best <em>Japanese</em> food delivery services that ever exist."</p>
+                </div>
               </div>
             </div>
           </div>
