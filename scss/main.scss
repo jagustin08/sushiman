@@ -6,11 +6,63 @@ $font-family-jakarta: 'Plus Jakarta Sans', sans-serif;
 $font-family-playfair: 'Playfair Display', serif;
 
 $font-family-base: $font-family-jakarta;
+$body-color: #111;
 
 @import "../node_modules/bootstrap/scss/maps";
+
+$custom-utilities-colors: (
+  "maroon": #b0464a,
+  "beige": #fff0dd
+);
+
+$theme-colors: map-merge($theme-colors, $custom-utilities-colors);
+$utilities-bg-colors: map-merge($utilities-bg-colors , $custom-utilities-colors);
+$utilities-text-colors: map-merge($utilities-bg-colors , $custom-utilities-colors);
+
+$custom-spacers: (
+  6: $spacer * 3.5,
+  //56px
+  7: $spacer * 4,
+  // 64px
+  8: $spacer * 4.5,
+  // 72px
+  9: $spacer * 5,
+  // 80px
+  10: $spacer * 6,
+  // 96px
+  11: $spacer * 8,
+  // 128px
+  12: $spacer * 10,
+  // 160px
+  13: $spacer * 12,
+  // 192px
+  14: $spacer * 16,
+  // 256px
+);
+$spacers: map-merge($spacers, $custom-spacers);
+
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-family": map-merge(
+      map-get($utilities, "font-family"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "font-family"), "values"),
+          (
+            "jakarta": var(--#{$prefix}font-jakarta),
+            "playfair": var(--#{$prefix}font-playfair)
+          ),
+        ),
+      ),
+    ),    
+  )
+);
+
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
@@ -27,3 +79,10 @@ $font-family-base: $font-family-jakarta;
     --#{$prefix}font-playfair: #{inspect($font-family-playfair)};
 }
 
+.container-fluid {
+    @include make-container(11%);
+}
+
+.display-0 {
+  @include rfs(7rem, font-size);
+}

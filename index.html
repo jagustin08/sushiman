@@ -10,14 +10,16 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">Sushiman</a>
+    <nav class="navbar navbar-expand-lg fixed-top py-7">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h3 class="text-uppercase fw-bold font-playfair text-light">Sushiman</h3>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto text-uppercase fw-semibold fs-5 gap-lg-7" style="--bs-nav-link-color: var(--bs-body-color)">
             <li class="nav-item">
               <a class="nav-link" href="#">Menu</a>
             </li>
@@ -31,40 +33,36 @@
               <a class="nav-link" href="#">About Us</a>
             </li>
           </ul>
-
-          <form class="ms-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="">
-              <span class="input-group-text">
-                <img src="images/search.svg" alt="" class="img-fluid">
-              </span>
-            </div>
-          </form>
         </div>
       </div>
     </nav>    
   </header>
 
   <main>
-    <section>
-      <div class="container">
+    <section id="home" class="overflow-hidden">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4">
-            <img src="" alt="">
+          <div class="d-none d-lg-block col-lg-4 bg-maroon">
+            <img src="images/sushi-1.png" alt="" class="img-fluid">
           </div>
 
-          <div class="col-md-8">
-            <h1>Feel the taste of Japanese foods</h1>
-            <p>Feel the taste of most popular Japanese foods from anywhere and anytime.</p>
-            <button type="button" class="btn btn-primary">Order Now</button>
-            <button type="button" class="btn btn-primary">How to Order</button>
+          <div class="col col-lg-8 pt-lg-14">
+            <div class="ps-lg-11">
+              <h1 class="display-0 font-playfair fw-semibold"> Feel the taste of Japanese foods
+              </h1>
+              <p>Feel the taste of most popular Japanese foods from anywhere and anytime.</p>
+              <button type="button" class="btn btn-primary">Order Now</button>
+              <button type="button" class="btn btn-primary">How to Order</button>
+            </div>
 
-            <div class="row">
-              <div class="col-md-6">
-                <span>24+</span>
-                <p>Happy Customers</p>
+            <div class="row bg-beige">
+              <div class="col-lg-6">                
+                <div class="ps-lg-11">
+                  <span>24+</span>
+                  <p>Happy Customers</p>
+                </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <swiper></swiper>
               </div>
             </div>
@@ -73,7 +71,7 @@
       </div>
     </section>
 
-    <section>
+    <!-- <section>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -91,17 +89,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
-    <section>
+    <!-- <section>
       <div class="container">
         <h2>Popular Food / 人気</h2>
         <swiper></swiper>
         <button type="button" class="btn btn-primary">Explore Food</button>
       </div>
-    </section>
+    </section> -->
 
-    <section>
+    <!-- <section>
       <div class="container">        
         <div class="row">
           <div class="col-md-6">
@@ -142,9 +140,9 @@
         </div>
         <button type="button" class="btn btn-primary">Discover</button>
       </div>
-    </section>
+    </section> -->
 
-    <section>
+    <!-- <section>
       <div class="container">
         <h2>Get offers stright to your inbox</h2>
         <p>Sign up for the Sushiman newsletter</p>
@@ -154,10 +152,10 @@
           <button class="btn btn-primary" type="button">Get Started</button>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
-  <footer>
+  <!-- <footer>
     <div class="container">
       <div class="d-flex">
         <img src="" alt="">
@@ -196,7 +194,7 @@
         </ul>                 
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
