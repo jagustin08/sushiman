@@ -26924,6 +26924,11 @@ textarea.form-control-lg {
   --bs-font-playfair: "Playfair Display", serif;
 }
 
+body {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 main {
   --navbar-height: 78px;
 }
@@ -26945,4 +26950,16 @@ main {
       }
     }
   } */
+}
+#home .sushi-container {
+  position: relative;
+  height: 500px;
+  flex: 1;
+}
+#home .sushi {
+  position: absolute;
+  width: 110%;
+  top: 50%;
+  transform: translateY(-35%);
+  left: 0;
 }/*# sourceMappingURL=main.css.map */

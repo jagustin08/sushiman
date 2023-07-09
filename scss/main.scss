@@ -110,6 +110,11 @@ $utilities: map-merge(
     --#{$prefix}font-playfair: #{inspect($font-family-playfair)};        
 }
 
+body {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 main {
   --navbar-height: 78px;
 
@@ -130,4 +135,26 @@ main {
       }
     }
   } */
+
+  .sushi-container  {
+    position: relative;
+    // border: 1px solid yellow;
+    height: 500px;
+    flex: 1;
+
+  }
+
+  .sushi {
+    position: absolute;
+    width: 110%;
+    top: 50%;
+    transform: translateY(-35%);
+    left: 0;
+    // margin-left: 0;
+    // display: none;
+
+    @include media-breakpoint-up('lg') {
+
+    }
+  }
 }
